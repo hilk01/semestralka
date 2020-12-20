@@ -34,7 +34,6 @@ commands:
             sudo pip install ansible
 
 
-<<<<<<< HEAD
 #  deploy:
 #     <<: *vse
 #     steps:
