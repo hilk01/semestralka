@@ -15,16 +15,10 @@ jobs:
           name: ansible test install
           command: |
             ansible --help
-  build:
-    - steps:
-      - checkout:
       - run: npm install
       - run: npm run test
       - run: npm run build
-      - persist_to_workspace:
-         root: .
-         paths:
-            - .
+
 
 workflows:
   version: 2.1
