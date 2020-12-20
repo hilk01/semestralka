@@ -25,5 +25,5 @@ workflows:
   execute:
       jobs:
         - build_deploy
-        - build
+
 
