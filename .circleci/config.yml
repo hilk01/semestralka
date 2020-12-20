@@ -41,7 +41,7 @@ commands:
            at: .
         - run:
            command: |
-              ansible --help
+              sudo ansible --help
 
 workflows:
   version: 2.1
