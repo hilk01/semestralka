@@ -19,8 +19,7 @@ jobs:
           name: Installing dependencies
           command: |
             sudo apt update -y
-            sudo python -m pip install SomePackage
-            sudo python get-pip.py
+            sudo apt-get install python3-pip
             sudo pip install --upgrade pip && pip install --upgrade setuptools
             pip install ansible boto boto3
 
