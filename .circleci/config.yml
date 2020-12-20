@@ -21,7 +21,7 @@ jobs:
             sudo apt update
             sudo apt-get install python-pip
             sudo pip install --upgrade pip && pip install --upgrade setuptools
-            sudo pip install ansible boto boto3
+            sudo pip3 install ansible boto boto3
 
       - run:
           name: Ansible test
