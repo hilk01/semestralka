@@ -10,6 +10,12 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: npm run test
+      - run: npm run build
+      - persist_to_workspace:
+         root: .
+         paths:
+            - .
       - run:
           name: Installing dependencies
           command: |
@@ -25,6 +31,6 @@ workflows:
   version: 2.1
   execute:
       jobs:
-        - build_deploy
+        - build_and_deploy
 
 
