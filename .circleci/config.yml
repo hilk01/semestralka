@@ -34,6 +34,7 @@ commands:
             sudo pip install ansible
 
 
+<<<<<<< HEAD
 #  deploy:
 #     <<: *vse
 #     steps:
@@ -42,6 +43,16 @@ commands:
 #        - run:
 #           command: |
 #              ansible --help
+=======
+  deploy:
+     <<: *vse
+     steps:
+        - attach_workspace:
+           at: .
+        - run:
+           command: |
+              sudo ansible --help
+>>>>>>> 932f48873cc33e6b85e9fd33fdf62700f2931e80
 
 workflows:
   version: 2.1
