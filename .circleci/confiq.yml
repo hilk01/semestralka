@@ -1,0 +1,24 @@
+jobs:
+  build_deploy:
+    machine:
+      image: circleci/node:8.11.3
+    steps:
+      - checkout
+      - run: npm install
+        - name: Installing dependencies
+        - command: |
+            sudo apt get update
+            sudo apt install python3-pip
+            sudo pip3 install ansible boto boto3
+        - run:
+            name: ansible test install
+            command: |
+                  . env/bin/activate
+                  ansible --help
+
+workflow:
+  version: 2.1
+  execute:
+      jobs:
+        - build_deploy
+
