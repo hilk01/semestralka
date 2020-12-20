@@ -5,6 +5,7 @@ jobs:
       image: ubuntu-2004:202010-01
     steps:
       - checkout
+      - run: npm install
       - run:
           name: Installing dependencies
           command: |
@@ -15,13 +16,6 @@ jobs:
           name: ansible test install
           command: |
             ansible --help
-      - run: npm install
-      - run: npm run test
-      - run: npm run build
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
 
 workflows:
   version: 2.1
