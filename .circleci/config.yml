@@ -1,3 +1,4 @@
+version: 2.1
 jobs:
   build_deploy:
     machine:
@@ -16,7 +17,7 @@ jobs:
             . env/bin/activate
             ansible --help
 
-workflow:
+workflows:
   version: 2.1
   execute:
       jobs:
