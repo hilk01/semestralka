@@ -15,8 +15,8 @@ jobs:
           name: ansible test install
           command: |
             ansible --help
-
-      -checkout
+  build:
+      - checkout
       - run: npm install
       - run: npm run test
       - run: npm run build
@@ -30,4 +30,5 @@ workflows:
   execute:
       jobs:
         - build_deploy
+        - build
 
