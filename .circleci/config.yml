@@ -28,7 +28,7 @@ jobs:
           command: |
             ansible --version
 
-      -run:
+      - run:
         name: Let´s go AWS!
         command: |
           cd ./ansible && ansible-playbook
