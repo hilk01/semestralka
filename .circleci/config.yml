@@ -34,23 +34,23 @@ commands:
             sudo pip install ansible
 
 
-  deploy:
-     <<: *vse
-     steps:
-        - attach_workspace:
-           at: .
-        - run:
-           command: |
-              ansible --help
+#  deploy:
+#     <<: *vse
+#     steps:
+#        - attach_workspace:
+#           at: .
+#        - run:
+#           command: |
+#              ansible --help
 
 workflows:
   version: 2.1
   build:
     jobs:
       - build
-      - deploy:
-         requires:
-            - build
-         filters:
-            branches:
-               only: master
+#      - deploy:
+#         requires:
+#            - build
+#         filters:
+#            branches:
+#               only: master
