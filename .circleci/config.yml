@@ -14,7 +14,6 @@ jobs:
       - run:
           name: ansible test install
           command: |
-            . env/bin/activate
             ansible --help
 
 workflows:
