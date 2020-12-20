@@ -28,9 +28,6 @@ jobs:
           command: |
             ansible -i
 
-      -run:
-        name: Let´s go AWS!
-
 
 workflows:
   version: 2.1
