@@ -23,13 +23,12 @@ jobs:
             sudo curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py"
             sudo python /tmp/get-pip.py
             sudo pip install --upgrade pip && pip install --upgrade setuptools
-            pip install ansible boto boto3
+            pip3 install ansible boto boto3
+
       - run:
           name: Ansible test
           command: |
-            ansible --version
-
-
+            ansible --v
 
 workflows:
   version: 2.1
