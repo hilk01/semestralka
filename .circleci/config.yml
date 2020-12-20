@@ -19,9 +19,6 @@ jobs:
           name: Installing dependencies
           command: |
             sudo apt update -y
-            sudo apt install -y curl python-dev git
-            sudo curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py"
-            sudo python /tmp/get-pip.py
             sudo pip install --upgrade pip && pip install --upgrade setuptools
             pip3 install ansible boto boto3
 
