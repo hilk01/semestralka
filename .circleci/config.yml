@@ -27,7 +27,8 @@ jobs:
       - run:
           name: Ansible test
           command: |
-            ansible -i
+            ansible --version
+
 
 
 workflows:
