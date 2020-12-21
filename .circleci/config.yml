@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Let´s go AWS!
           command: |
-            cd ./ansible && ansible-playbook --version
+            cd ./ansible && ansible-playbook && echo "test-password" > ~/.ansible/vault-password.txt
 
 workflows:
   version: 2.1
