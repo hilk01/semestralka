@@ -18,20 +18,21 @@ jobs:
       - run:
           name: Installing dependencies
           command: |
-            sudo apt update
-            sudo apt-get install python-pip
-            sudo pip install --upgrade pip && pip install --upgrade setuptools
-            sudo pip install ansible boto boto3
+             sudo apt update
+             sudo apt-get install python3-pip
+             sudo pip3 install --upgrade pip && pip3 install --upgrade setuptools
+             sudo pip3 install ansible boto boto3
+             sudo pip3 install cryptography
 
       - run:
           name: Ansible test
           command: |
             ansible --version
 
-      - run:
-          name: Let´s go AWS!
-          command: |
-            cd ./ansible && ansible-playbook
+#      - run:
+#          name: Let´s go AWS!
+#          command: |
+#            cd ./ansible && ansible-playbook
 
 
 workflows:
