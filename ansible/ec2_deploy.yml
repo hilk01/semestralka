@@ -4,6 +4,7 @@
 
 tasks:
   - name: launch EC2 instance
+    ec2:
       instance_type: t2.micro
       image: ami-06451a6f16cf2d02d
       region: us-east-1
@@ -11,8 +12,9 @@ tasks:
       vpc_subnet_id: subnet-8576f9a4
       assign_public_ip: yes
       wait: yes
-      count: 2
+      count: 1
+    register: ec2
 
-      aws_access_key: "{{access_key}}"
-      aws_secret_key: "{{secret_key}}"
-      security_token: "{{session_token}}"
+#      aws_access_key: "{{access_key}}"
+#      aws_secret_key: "{{secret_key}}"
+#      security_token: "{{session_token}}"
