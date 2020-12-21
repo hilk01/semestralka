@@ -33,7 +33,6 @@ jobs:
           command: |
             cd ./ansible && ansible-playbook
 
-
 workflows:
   version: 2.1
   execute:
