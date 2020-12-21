@@ -5,7 +5,7 @@
   tasks:
     - name: launch EC2 instance
       ec2:
-        instance_type: t2.micro
+        instance_type: t2.small
         image: ami-06451a6f16cf2d02d
         region: us-east-1
         key_name: test
@@ -20,7 +20,7 @@
       with_items: '{{ec2.instances}}'
 
     - name: SSH connect Timeout
-      wait_for: host={{ item.public_dns_name }} port=22 delay=30 timeout=300 state=started
+      wait_for: host={{ item.public_dns_name }} port=22 delay=30 timeout=700 state=started
       with_items: '{{ec2.instances}}'
 
 - name: Configure EC2
