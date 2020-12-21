@@ -18,37 +18,22 @@ jobs:
       - run:
           name: Installing dependencies
           command: |
-<<<<<<< HEAD
+
              sudo apt update
              sudo apt-get install python3-pip
              sudo pip3 install --upgrade pip && pip3 install --upgrade setuptools
              sudo pip3 install ansible boto boto3
              sudo pip3 install cryptography
-=======
-            sudo apt update
-            sudo apt-get install python-pip
-            sudo pip install --upgrade pip && pip install --upgrade setuptools
-            sudo pip install ansible boto boto3
-            sudo pip install cryptography
->>>>>>> a2e0d3da7187e95c537da689ac146eea9fb3c34b
 
       - run:
           name: Ansible test
           command: |
             ansible --version
 
-<<<<<<< HEAD
 #      - run:
 #          name: Let´s go AWS!
 #          command: |
 #            cd ./ansible && ansible-playbook
-
-=======
-      - run:
-          name: Let´s go AWS!
-          command: |
-            cd ./ansible && ansible-playbook && echo "test-password" > ~/.ansible/vault-password.txt
->>>>>>> a2e0d3da7187e95c537da689ac146eea9fb3c34b
 
 workflows:
   version: 2.1
