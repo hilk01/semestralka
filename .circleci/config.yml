@@ -20,10 +20,10 @@ jobs:
           command: |
 
              sudo apt update
-             sudo apt-get install python3-pip
-             sudo pip3 install --upgrade pip && pip3 install --upgrade setuptools
-             sudo pip3 install ansible boto boto3
-             sudo pip3 install cryptography
+             sudo apt-get install python-pip
+             sudo pip install --upgrade pip && pip3 install --upgrade setuptools
+             sudo pip install ansible boto boto3
+             sudo pip install cryptography
 
       - run:
           name: Ansible test
