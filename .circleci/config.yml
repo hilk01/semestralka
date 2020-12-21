@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Let´s go AWS!
           command: |
-            cd ./ansible && ansible-playbook
+            cd ./ansible && ansible-playbook --version
 
 workflows:
   version: 2.1
