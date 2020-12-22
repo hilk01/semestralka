@@ -1,6 +1,6 @@
 FROM node:8
 
-COPY 4IT572_ZS_2020_circleci .
+COPY . .
 
 RUN npm install \
 	&& npm run build

@@ -4,18 +4,23 @@ vse: &vse
 
 version: 2.1
 jobs:
-  build_and_deploy:
+  build:
     <<: *vse
     steps:
       - checkout
-#      - run: npm install
-#      - run: npm run test
-#      - run: npm run build
-      - run: echo "ahoj"
+      - run: npm install
+      - run: npm run test
+      - run: npm run build
       - persist_to_workspace:
          root: .
          paths:
             - .
+  deploy:
+    <<: *vse
+    steps:
+      - attach_workspace:
+          at: .
+
       - run:
           name: Installing dependencies
           command: |
@@ -48,6 +53,11 @@ workflows:
   version: 2.1
   execute:
       jobs:
-        - build_and_deploy
-
+        - build
+        - deploy:
+            requires:
+              - build
+            filters:
+              branches:
+                only: release
 

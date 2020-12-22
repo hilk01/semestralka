@@ -49,7 +49,7 @@
         dest: ./app
 
     - name: Build Docker
-      shell: cd app && docker build -t myeshop:latest .
+      shell: cd ./app && docker build -t myeshop:latest .
       become: yes
 
     - name: Run Docker
