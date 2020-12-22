@@ -38,7 +38,7 @@
       become: yes
 
     - service:
-        name: Docker
+        name: docker
         state: started
         enabled: yes
       become: yes
