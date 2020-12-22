@@ -6,7 +6,7 @@
     - name: launch EC2 instance
       ec2:
         instance_type: t2.small
-        image: ami-06451a6f16cf2d02d
+        image: ami-085925f297f89fce1
         region: us-east-1
         key_name: test
         vpc_subnet_id: subnet-8576f9a4
